@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihir R. Chaubey — AI/ML Engineer & Systems Architect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --surface: #0a0a0a;
+            --border: #1f1f1f;
+            --border-hover: #333333;
+            --text-primary: #ededed;
+            --text-secondary: #888888;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 0 120px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .hero {
+            margin-bottom: 80px;
+        }
+
+        .hero-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--text-primary);
+            color: var(--bg);
+        }
+
+        .btn-primary:hover {
+            background-color: #ffffff;
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--border-hover);
+            background-color: var(--surface);
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+        }
+
+        .item-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: border-color 0.2s ease;
+        }
+
+        .item-card:hover {
+            border-color: var(--border-hover);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+        }
+
+        .item-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .item-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .exp-item {
+            margin-bottom: 16px;
+        }
+
+        .exp-role {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .exp-company {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .exp-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .exp-list li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .exp-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--border-hover);
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="#" class="logo">mihir.chaubey</a>
+            <div class="nav-links">
+                <a href="#projects">projects</a>
+                <a href="#experience">experience</a>
+                <a href="mailto:mihirrchaubey@gmail.com">contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="hero-tag">AI/ML Engineer & Systems Architect</span>
+            <h1>Building high-performance ML systems, custom GPU kernels, and scalable vision pipelines.</h1>
+            <p>Specializing in Generative AI, Computer Vision, and high-throughput edge deployments. Bridging deep learning research with extreme performance optimization.</p>
+            <div class="cta-group">
+                <a href="https://github.com/Mihir-Chaubey" target="_blank" class="btn btn-primary">GitHub Profile</a>
+                <a href="https://linkedin.com/in/mihir-chaubey" target="_blank" class="btn btn-secondary">LinkedIn</a>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="projects">
+            <div class="section-title">[ featured projects ]</div>
+            
+            <div class="item-card">
+                <div class="item-header">
+                    <div class="item-title">Mamba SSM HIP Kernel</div>
+                    <div class="item-meta">3.4M tokens/sec</div>
+                </div>
+                <div class="item-desc">
+                    Engineered custom HIP/ROCm C++ kernels for Mamba selective scan operations, achieving extreme peak throughput via dynamic shared memory caching and thread-block vectorization while maintaining numerical precision.
+                </div>
+                <div class="tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">ROCm / HIP</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">CUDA</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-header">
+                    <div class="item-title">Production Video Analytics & Tracking API</div>
+                    <div class="item-meta">FastAPI + YOLOv8</div>
+                </div>
+                <div class="item-desc">
+                    Multi-tier asynchronous microservice architecture integrating YOLOv8 and ByteTrack. Implemented an SHA-256 binary hashing ingestion gate in SQLite, slashing 100% of redundant ML compute cycles for duplicate streams.
+                </div>
+                <div class="tags">
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">YOLOv8</span>
+                    <span class="tag">ByteTrack</span>
+                    <span class="tag">ChromaDB</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-header">
+                    <div class="item-title">Visibility-Aware Multimodal ASR Pipeline</div>
+                    <div class="item-meta">Whisper + AV-HuBERT</div>
+                </div>
+                <div class="item-desc">
+                    Two-path production ASR system dynamically routing between audio-only and audio-visual models based on speaker visibility using MediaPipe Face Mesh, enforcing strict subtitle formatting constraints.
+                </div>
+                <div class="tags">
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">Whisper</span>
+                    <span class="tag">AV-HuBERT</span>
+                    <span class="tag">MediaPipe</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience">
+            <div class="section-title">[ professional experience ]</div>
+
+            <div class="exp-item item-card">
+                <div class="item-header">
+                    <div class="exp-role">R&D Intern</div>
+                    <div class="item-meta">Aug 2025 – Feb 2026</div>
+                </div>
+                <div class="exp-company">Rikaian Technology</div>
+                <ul class="exp-list">
+                    <li>Scaled Indic Trans v2 (1.1B params) from consumer GPUs to A100 using LoRA + FP16, achieving ~83ms inference latency.</li>
+                    <li>Built Hindi ASR + speaker diarization pipeline for 70+ hours of audio using WhisperX & Pyannote.</li>
+                    <li>Audited 30+ enterprise APIs versus self-hosted models, migrating workflows to slash compute costs while maintaining sub-100ms latency.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item item-card" style="margin-top: 16px;">
+                <div class="item-header">
+                    <div class="exp-role">Gen AI Intern</div>
+                    <div class="item-meta">Sep 2024 – Feb 2025</div>
+                </div>
+                <div class="exp-company">Tata Motors Limited</div>
+                <ul class="exp-list">
+                    <li>Fine-tuned large language models (Llama-3) for automated email response, customer support bots, and domain-specific Q&A engines.</li>
+                    <li>Engineered domain-specific prompts and optimized training pipelines using Hugging Face and PEFT.</li>
+                    <li>Built a real-time license plate recognition system using YOLOv8 for detection and OCR with 97% accuracy.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div>© 2026 Mihir R. Chaubey</div>
+            <div class="social-links">
+                <a href="https://github.com/Mihir-Chaubey" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/mihir-chaubey" target="_blank">LinkedIn</a>
+                <a href="mailto:mihirrchaubey@gmail.com">Email</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
