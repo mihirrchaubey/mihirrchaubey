@@ -4,7 +4,7 @@
 <div align="center">
 
   <!-- A dynamic banner that types out your key focus areas, styled like the 'Hi there' banner -->
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=3776AB&center=true&vCenter=true&width=600&lines=Hi+there,+I'm+Mihir+R.+Chaubey+👋;AI%2FML+Engineer+%26+Systems+Architect;Bridging+DL+Research+with+Production" alt="Typing Banner" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=3776AB&center=true&vCenter=true&width=600&lines=Hi+there,+I'm+Mihir+Chaubey+👋;AI%2FML+Engineer+%26+Systems+Architect;Bridging+DL+Research+with+Production" alt="Typing Banner" />
 
   <br />
 
